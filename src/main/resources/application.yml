@@ -1,0 +1,36 @@
+#端口和上下文配置
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+
+#spring应用和数据源配置
+spring:
+  application:
+    name: study-spring
+  datasource:
+    url: jdbc:mysql://localhost:3306/study_springboot_approval?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8
+    username: root
+    password: 0
+  security:
+    user:
+      password: 0
+#mybatis-plus配置
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: true
+  mapper-locations: classpath:mapper/*.xml
+
+#日志配置
+logging:
+  level:
+    root: info
+    com.student.zhaokangwei.mapper: trace
+
+fileUploadPath: D:/Users/zkw-computer/Desktop/resources
+
+# API文档接口总开关
+springfox:
+  documentation:
+    enabled: true
